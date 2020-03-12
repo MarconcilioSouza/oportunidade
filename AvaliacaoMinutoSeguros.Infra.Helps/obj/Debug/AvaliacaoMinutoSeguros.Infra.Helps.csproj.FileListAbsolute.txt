@@ -1,0 +1,6 @@
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Helps\bin\Debug\AvaliacaoMinutoSeguros.Infra.Helps.dll
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Helps\bin\Debug\AvaliacaoMinutoSeguros.Infra.Helps.pdb
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Helps\obj\Debug\AvaliacaoMinutoSeguros.Infra.Helps.csprojAssemblyReference.cache
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Helps\obj\Debug\AvaliacaoMinutoSeguros.Infra.Helps.csproj.CoreCompileInputs.cache
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Helps\obj\Debug\AvaliacaoMinutoSeguros.Infra.Helps.dll
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Helps\obj\Debug\AvaliacaoMinutoSeguros.Infra.Helps.pdb

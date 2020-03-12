@@ -1,0 +1,14 @@
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AvaliacaoMinutoSeguros.Infra.Data.dll
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AvaliacaoMinutoSeguros.Infra.Data.pdb
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AvaliacaoMinutoSeguros.Domain.dll
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AvaliacaoMinutoSeguros.Domain.pdb
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\obj\Debug\AvaliacaoMinutoSeguros.Infra.Data.csprojAssemblyReference.cache
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\obj\Debug\AvaliacaoMinutoSeguros.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\obj\Debug\AvaliacaoMinutoSeguros.Infra.Data.csproj.CopyComplete
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\obj\Debug\AvaliacaoMinutoSeguros.Infra.Data.dll
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\obj\Debug\AvaliacaoMinutoSeguros.Infra.Data.pdb
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AutoMapper.dll
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AutoMapper.pdb
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AutoMapper.xml
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AvaliacaoMinutoSeguros.Infra.Helps.dll
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AvaliacaoMinutoSeguros.Infra.Helps.pdb
