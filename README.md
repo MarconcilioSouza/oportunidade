@@ -46,6 +46,7 @@ Culturalmente você terá um bom fit se:
 
 Se você tem interesse em fazer parte de uma equipe multidisciplinar e que adora criar software com qualidade, siga os seguintes passos:
 
+
 Faça um fork desse projeto e faça um pull request com a resolução do seguinte problema:
 
 Você deverá criar um programa para obter automaticamente o conteúdo dos dez últimos tópicos publicados no blog da Minuto Seguros. Abaixo segue um link para auxiliá-lo nesse trabalho:
