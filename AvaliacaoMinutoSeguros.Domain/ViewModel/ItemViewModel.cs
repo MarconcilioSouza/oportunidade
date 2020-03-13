@@ -1,5 +1,4 @@
-﻿using AvaliacaoMinutoSeguros.Infra.Helps;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,68 +6,69 @@ using System.Text;
 namespace AvaliacaoMinutoSeguros.Domain.ViewModel
 {
     public class ItemViewModel
-    {
-        private const string ARTIGOS_PREPOSICOES = "a;as;o;os;uma;umas;um;uns;ante;após;até;com;contra;de;desde;em;entre;para;por;perante;sem;sob;sobre;trás;afora;como;conforme;consoante;durante;exceto;feito;fora;mediante;menos;salvo;segundo;senão;tirante;visto;do;duma;à;àquele;aquele;duma;disto;nas;num;nessa;pelo;pelas;ao;aos;aonde";
-
+    {        
         public string Title { get; set; }
         public string Creator { get; set; }
         public List<string> Category { get; set; }
         public string Link { get; set; }
         public string Description { get; set; }
         public string Encoded { get; set; }
+        public DateTime PubDate { get; set; }
+
         public int TotalPalavrasBlog { get; set; }
         public List<PalavrasViewModel> Palavras { get; set; }
 
-        public int TotalPalavras(string palavras)
+        /// <summary>
+        /// Retorna a quantidade de palavras no texto
+        /// </summary>
+        /// <param name="texto">testo a ser verificado</param>
+        /// <returns>total de palavras</returns>
+        public int TotalPalavras(string texto)
         {
-            palavras = " " + StringHelpers.RemoverTagsHtml(palavras);
-            palavras = StringHelpers.RemoverPontuacao(palavras);
-
-            foreach (string word in ARTIGOS_PREPOSICOES.Split(';'))
-            {
-                palavras = palavras.ToLower().Replace(" " + word + " ", " ");
-            }
-            while (palavras.Contains("  "))
-            {
-                palavras = palavras.Replace("  ", " ");
-            }
-
-            return palavras.Trim().Split(' ').Count();
+            return texto.Trim().Split(' ').Count();
         }
 
+        /// <summary>
+        /// Retorna as 10 palavras mais usuadas e a quantidade de vezes que existe no texto
+        /// </summary>
+        /// <param name="texto">texto a ser verificado</param>
+        /// <returns>List<PalavrasViewModel></returns>
         public List<PalavrasViewModel> ObterPalavrasRepetidas(string texto)
         {
-            texto = StringHelpers.RemoverTagsHtml(texto);
-            texto = StringHelpers.RemoverPontuacao(texto);
-            texto = texto.ToLower();
+            List<PalavrasViewModel> palavrasViewModel = new List<PalavrasViewModel>();
 
             StringBuilder sb = new StringBuilder("");
-            int index = 0;
             foreach (string palavra in texto.Split(' '))
             {
-                if (!string.IsNullOrEmpty(palavra) && (sb.ToString().ToLower().IndexOf(string.Concat("|", palavra, "|"), StringComparison.CurrentCultureIgnoreCase) == -1)
-                    && (!Array.Exists(ARTIGOS_PREPOSICOES.Split(';'), x => x.Equals(palavra, StringComparison.OrdinalIgnoreCase))))
+                if ((sb.ToString().ToLower().IndexOf(string.Concat("|", palavra, "|"), StringComparison.CurrentCultureIgnoreCase) == -1))
                 {
                     sb.AppendLine(string.Concat("|", palavra, "|"));
-                    index++;
                 }
             }
 
-            List<PalavrasViewModel> palavrasViewModel = new List<PalavrasViewModel>();
+            List<PalavrasViewModel> result = new List<PalavrasViewModel>();
             foreach (string palavra in sb.ToString().Split('|'))
             {
-                if (!string.IsNullOrWhiteSpace(palavra))
+                var _palavra = palavra.Trim();
+                if (!string.IsNullOrWhiteSpace(_palavra))
                 {
                     palavrasViewModel.Add(new PalavrasViewModel()
                     {
-                        Palavra = palavra,
-                        TotalVezesUsuada = TotalPalavrasRepetidas(texto, palavra.Replace("|", ""))
+                        Palavra = _palavra,
+                        TotalVezesUsuada = TotalPalavrasRepetidas(texto, _palavra),
                     });
                 }
             }
+
             return palavrasViewModel.OrderByDescending(x => x.TotalVezesUsuada).Take(10).ToList();
         }
 
+        /// <summary>
+        /// Calcular o total de palavras repetidas
+        /// </summary>
+        /// <param name="texto">texto a ser usado</param>
+        /// <param name="palavra">palavra a ser verificada</param>
+        /// <returns></returns>
         private int TotalPalavrasRepetidas(string texto, string palavra)
         {
             string[] palavras = texto.Split(' ');

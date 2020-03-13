@@ -2,6 +2,7 @@
 using AvaliacaoMinutoSeguros.Domain.Interfaces.Repositorio;
 using AvaliacaoMinutoSeguros.Domain.Interfaces.Servicos;
 using AvaliacaoMinutoSeguros.Domain.ViewModel;
+using AvaliacaoMinutoSeguros.Infra.Helps;
 using System;
 using System.Collections.Generic;
 
@@ -11,6 +12,10 @@ namespace AvaliacaoMinutoSeguros.Business.Servicos
     {
         private readonly IRepositorioRssFeed repositorioRssFeed;
 
+        /// <summary>
+        /// Construtor, injeta o repositorio via IoC.
+        /// </summary>
+        /// <param name="_repositorioRssFeed"></param>
         public ServicoRssFeed(IRepositorioRssFeed _repositorioRssFeed)
         {
             repositorioRssFeed = _repositorioRssFeed;
@@ -32,15 +37,41 @@ namespace AvaliacaoMinutoSeguros.Business.Servicos
 
                 foreach (var item in feedModel.Items)
                 {
-                    var html = repositorioRssFeed.ObterHtmlBlog(item.Link);
-                    item.TotalPalavrasBlog = item.TotalPalavras(item.Description);
-                    item.Palavras = item.ObterPalavrasRepetidas(item.Description);
+                    string texto = TratarTexto(item);
+
+                    item.TotalPalavrasBlog = item.TotalPalavras(texto);
+                    item.Palavras = item.ObterPalavrasRepetidas(texto);
                 }
 
                 return feedModel;
             }
             catch (Exception)
             {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Remover as tags html, pontuação, os artigos, preposições e espaços desnecessarios do texto
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        private static string TratarTexto(ItemViewModel item)
+        {
+            try
+            {
+                string texto = string.Concat(item.Title, " ", item.Description, " ", item.Encoded);
+                texto = StringHelpers.RemoverTagsHtml(texto);
+                texto = StringHelpers.RemoverPontuacao(texto);
+                texto = texto.ToLower();
+                texto = StringHelpers.RemoverArtigosEPreposicoes(texto);
+                texto = StringHelpers.RemoverEspacos(texto);
+                return texto;
+
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }

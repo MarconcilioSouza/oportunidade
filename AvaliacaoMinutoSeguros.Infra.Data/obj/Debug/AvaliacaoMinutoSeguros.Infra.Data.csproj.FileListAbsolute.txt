@@ -10,5 +10,3 @@ C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\o
 C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AutoMapper.dll
 C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AutoMapper.pdb
 C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AutoMapper.xml
-C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AvaliacaoMinutoSeguros.Infra.Helps.dll
-C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Infra.Data\bin\Debug\AvaliacaoMinutoSeguros.Infra.Helps.pdb

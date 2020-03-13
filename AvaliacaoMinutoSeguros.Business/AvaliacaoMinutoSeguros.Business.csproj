@@ -55,6 +55,10 @@
       <Project>{9A75E813-824F-4E5E-BE63-7A8007961367}</Project>
       <Name>AvaliacaoMinutoSeguros.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AvaliacaoMinutoSeguros.Infra.Helps\AvaliacaoMinutoSeguros.Infra.Helps.csproj">
+      <Project>{C2AF061D-F5FC-4AD9-9481-04ACBA0DC424}</Project>
+      <Name>AvaliacaoMinutoSeguros.Infra.Helps</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
