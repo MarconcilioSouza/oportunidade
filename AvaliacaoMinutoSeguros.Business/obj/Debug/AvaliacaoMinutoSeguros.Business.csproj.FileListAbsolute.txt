@@ -12,3 +12,7 @@ C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Business\obj
 C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Business\obj\Debug\AvaliacaoMinutoSeguros.Business.pdb
 C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Business\bin\Debug\AvaliacaoMinutoSeguros.Infra.Helps.dll
 C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Business\bin\Debug\AvaliacaoMinutoSeguros.Infra.Helps.pdb
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Business\bin\Debug\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Business\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Business\bin\Debug\AutoMapper.Extensions.Microsoft.DependencyInjection.pdb
+C:\Works\AvaliacaoMinutoSeguros\oportunidade\AvaliacaoMinutoSeguros.Business\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
